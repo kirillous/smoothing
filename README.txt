@@ -1,0 +1,4 @@
+smooth_temperature.py - takes in the dataset of CPU temperature readings which have a lot of noise nad outliers due to inacuracy.
+Use two methods of noise reduction - LOESS and Kalman smoothing which are two different approaches to smoothing. Kalman takes in many parameters in form of matricies and can be more accurate; however it has to be manually adjusted. Results can be seen on the graph as two smoothed lines.
+
+calc_distance.py - takes in GPS data from walk1.gpx file which are not accurate. It calcualtes the raw distance directly from dataset (simply "connecting the points"). Then it applies Kalman smoothing. Parameters were estimates as walking speed of 1m/s and GPS inaccuracy of 15m in this particular case, and no exernal forces of acceleration were applied. Given those parameters the smoothed distance was 3 times less than raw distance.
